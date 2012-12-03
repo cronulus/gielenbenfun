@@ -1,3 +1,37 @@
 <html>
 BLAAAAAAAAAAAAAA
+
+<body>
+
+<script>
+
+function keerOm(rij){ 
+
+for (var i=0;i < (rij.length/2); i++)
+	{  var hulp = rij[i];
+	   rij[i] = rij[rij.length - 1 - i];
+	   rij[rij.length - 1 - i] = hulp;
+	}
+}
+
+function schrijfUit(rij){
+for (var i = 0; i < aRij.length ; i++) confirm(rij[i]);
+
+}
+
+var aRij= [1,2,3,4,5];
+
+schrijfUit(aRij);
+
+
+keerOm(aRij);
+
+schrijfUit(aRij);
+
+ 
+
+</script>
+
+</body>
 </html>
+
