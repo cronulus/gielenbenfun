@@ -1,0 +1,49 @@
+<html>
+ <head>
+  <title>
+     Oef 1
+  </title>
+ </head>
+<body>
+
+<script>
+
+function sorteerEvenOneven(rij){
+	for (var i = 0 ; i < rij.length – 1 ; i++){
+		var even= i;
+		for (var j = i + 1 ; j < rij.length ; j++){
+
+			}
+		}
+		verwissel(rij , i , even);
+	}
+}
+
+function verwissel (rij, i, j){
+if (i >= 0 && i < rij.length && j >= 0 && j < rij.length){
+var hulp= rij[i];
+rij[i]= rij[j];
+rij[j]= hulp;
+}
+}
+
+
+
+function schrijfUit(rij){
+for (var i = 0; i < aRij.length ; i++) document.write(rij[i] + ' ');
+document.write('<br>');
+}
+
+var aRij= [24,13,9,64,7,23];
+
+schrijfUit(aRij);
+
+sorteerEvenOneven(aRij);
+
+schrijfUit(aRij);
+
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,43 @@
+<html>
+ <head>
+  <title>
+     Insertion sort
+  </title>
+ </head>
+<body>
+
+<script>
+
+function insertion(rij){ 
+
+	for (var i = 0; i < rij.length  ; i++){
+		var help = rij[i]
+		for (var j = i - 1; j >= 0 && rij[j] > help; --j){
+			rij[j + 1] = rij[j];
+			rij[j + 1] = help;
+		}
+		
+	}
+		
+}
+
+
+
+function schrijfUit(rij){
+for (var i = 0; i < aRij.length ; i++) document.write(rij[i] + ' ');
+document.write('<br>');
+}
+
+var aRij= [24,13,9,64,7,23];
+
+schrijfUit(aRij);
+
+insertion(aRij);
+
+schrijfUit(aRij);
+
+</script>
+
+</body>
+</html>
+
