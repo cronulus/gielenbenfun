@@ -9,22 +9,29 @@
 <script>
 
 function sorteerEvenOneven(rij){
-	for (var i = 0 ; i < rij.length – 1 ; i++){
-		var even= i;
-		for (var j = i + 1 ; j < rij.length ; j++){
-
-			}
+	for (var i = 0 ; i < rij.length - 1; i++){
+		var indexEven = i;
+		var x = rij[i]%2;
+		if (x != 0) {
+			for (var j = i + 1 ; j < rij.length ; j++){
+				var y = rij[j]%2;
+				if( y == 0){
+					indexEven= j;
+					verwissel(rij, i, indexEven);
+				}
+			}	
 		}
-		verwissel(rij , i , even);
+		
 	}
+	return rij;
 }
 
 function verwissel (rij, i, j){
-if (i >= 0 && i < rij.length && j >= 0 && j < rij.length){
-var hulp= rij[i];
-rij[i]= rij[j];
-rij[j]= hulp;
-}
+	if (i >= 0 && i < rij.length && j >= 0 && j < rij.length){
+		var hulp= rij[i];
+		rij[i]= rij[j];
+		rij[j]= hulp;
+	}
 }
 
 
