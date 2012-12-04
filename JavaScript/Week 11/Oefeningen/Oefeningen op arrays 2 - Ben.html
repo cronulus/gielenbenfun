@@ -19,11 +19,10 @@ function runThingy(){
 
 	// initialiseer de 1 vanboven
 	var vorigeRij = [1];
+	schrijfUit(vorigeRij);
 	
 	for(i = 1; i <= 5; i++)
 	{
-		schrijfUit(vorigeRij);
-		
 		var huidigeRij = new Array();
 		for(j = 0; j <= i; j++)
 		{
@@ -40,7 +39,8 @@ function runThingy(){
 				huidigeRij[j] = vorigeRij[j-1] + vorigeRij[j]
 			}
 		}
-		vorigeRij = huidigeRij;
+		schrijfUit(huidigeRij);
+		vorigeRij = huidigeRij; // voor de volgende iteratie wordt de huidige rij, de vorige rij
 	}
 }
 
