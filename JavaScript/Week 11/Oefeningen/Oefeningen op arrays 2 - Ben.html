@@ -1,0 +1,56 @@
+<html>
+ <head>
+  <title>
+     Oef 1
+  </title>
+ </head>
+<body>
+<pre>
+
+<script>
+
+//            1
+//          1   1
+//        1   2   1
+//      1   3   3   1
+//    1   4   6   4   1
+
+function runThingy(){
+
+	// initialiseer de 1 vanboven
+	var vorigeRij = [1];
+	
+	for(i = 1; i <= 5; i++)
+	{
+		schrijfUit(vorigeRij);
+		
+		var huidigeRij = new Array();
+		for(j = 0; j <= i; j++)
+		{
+			// eerste of laatste element in de rij? zet op 1
+			if(j==0 || j == i){ huidigeRij[j] = 1; continue; }
+			
+			// uit de vorige rij:
+			// element in de vorige positie + element in dezelfde positie
+			huidigeRij[j] = vorigeRij[j-1] + vorigeRij[j]
+		}
+		vorigeRij = huidigeRij;
+	}
+}
+
+
+// simpele array print
+function schrijfUit(rij){
+	for (var i = 0; i < rij.length ; i++) document.write(rij[i] + '	');
+	document.write('<br>');
+}
+
+
+runThingy();
+
+</script>
+
+</pre>
+</body>
+</html>
+
