@@ -27,12 +27,19 @@ function runThingy(){
 		var huidigeRij = new Array();
 		for(j = 0; j <= i; j++)
 		{
-			// eerste of laatste element in de rij? zet op 1
-			if(j==0 || j == i){ huidigeRij[j] = 1; continue; }
-			
-			// uit de vorige rij:
-			// element in de vorige positie + element in dezelfde positie
-			huidigeRij[j] = vorigeRij[j-1] + vorigeRij[j]
+			// eerste of laatste element in de rij? 
+			if(j==0 || j == i)
+			{ 
+				// zet op 1
+				huidigeRij[j] = 1; 
+				continue; 
+			}
+			else
+			{
+				// uit de vorige rij:
+				// element in de vorige positie + element in dezelfde positie
+				huidigeRij[j] = vorigeRij[j-1] + vorigeRij[j]
+			}
 		}
 		vorigeRij = huidigeRij;
 	}
