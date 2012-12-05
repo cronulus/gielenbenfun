@@ -1,0 +1,57 @@
+<html>
+ <head>
+  <title>
+     Oef 3
+  </title>
+ </head>
+<body>
+
+<script>
+
+
+
+function stem(){
+	var kandidaten = [0,0,0,0,0,0,0,0,0,0];
+	var indexGrootste1 = 0;
+	var indexGrootste2 = 0;
+	var indexGrootste3 = 0;  
+	for(var i = 0; i < 1000; i ++){
+	  var x = Math.floor((Math.random()*10));
+	  kandidaten[x] = kandidaten[x] + 1;
+	}
+
+	for(var j= 0; j < kandidaten.length - 1 ; j++){
+		
+		if (kandidaten[indexGrootste1] <= kandidaten[j]){
+			indexGrootste1 = j;
+		}
+	}
+	
+	for(var f= 0; f < kandidaten.length - 1 ; f++){
+		
+		if (kandidaten[indexGrootste2] <= kandidaten[f] && indexGrootste1 != f){
+			indexGrootste2 = f;
+		}
+	}
+	
+	for(var k= 0; k < kandidaten.length - 1 ; k++){
+		
+		if (kandidaten[indexGrootste3] <= kandidaten[k] && indexGrootste1 != k && indexGrootste2 != k){
+			indexGrootste3 = k;
+		}
+	}
+	document.write('De top 3 kandidaten ' + indexGrootste1 + ' ' + indexGrootste2 + ' ' + indexGrootste3);
+}
+
+
+function schrijfUit(indexGrootste1, indexGrootste2, indexGrootste3){
+document.write('De top 3 kandidaten ' + indexGrootste1 + ' ' + indexGrootste2 + ' ' + indexGrootste3);
+}
+
+stem()
+
+</script>
+
+</body>
+</html>
+

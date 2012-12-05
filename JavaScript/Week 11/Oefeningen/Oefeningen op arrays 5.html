@@ -1,0 +1,56 @@
+<html>
+ <head>
+  <title>
+     Oef 5
+  </title>
+ </head>
+<body>
+
+<script>
+
+
+
+function berekening(rij){
+	var nieuwRij = new Array();
+	for (var i = 0; i < rij.length - 1; i= i + 2){
+		var j = i + 1;
+		if (rij[i] > rij[j]){
+			rij[j] = rij[i];
+		}
+	}
+	schrijfUit(rij);
+}
+
+
+function berekening2(rij){
+	var nieuwRij = new Array();
+	for (var i = rij.length - 1; i >= 0; i--){
+		var j = i - 1;
+		if (i != 0){
+			if (rij[i] < rij[j]){
+				rij[i] = rij[j];
+			}
+		}
+	}
+	schrijfUit(rij);
+
+}
+
+
+function schrijfUit(rij){
+for (var i = 0; i < rij.length ; i++) document.write(rij[i] + ' ');
+document.write('<br>');
+}
+
+var aRij= [1,2,5,3,2,9,8,6];
+
+schrijfUit(aRij);
+
+berekening(aRij);
+
+
+</script>
+
+</body>
+</html>
+

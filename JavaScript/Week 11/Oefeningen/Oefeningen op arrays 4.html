@@ -1,0 +1,41 @@
+<html>
+ <head>
+  <title>
+     Oef 4
+  </title>
+ </head>
+<body>
+
+<script>
+
+
+
+function berekening(rij){
+	var j = 0
+	for ( var i = 0; i < rij.length - 1; i++){
+		var nieuwRij = new Array();
+		nieuwRij[0] = rij[0]
+		j = i + 1;
+		nieuwRij[j] = rij[i] + rij[j];
+	}
+	schrijfUit(nieuwRij);
+}
+
+
+function schrijfUit(rij){
+for (var i = 0; i < rij.length ; i++) document.write(rij[i] + ' ');
+document.write('<br>');
+}
+
+var aRij= [1,2,5,3,2,9,8,6];
+
+schrijfUit(aRij);
+
+berekening(aRij);
+
+
+</script>
+
+</body>
+</html>
+
